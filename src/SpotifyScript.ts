@@ -2864,6 +2864,8 @@ function getUserPlaylists() {
                         return `${COLLECTION_UR_PREFIX}${id_from_uri(item.uri)}`
                     case "Audiobook":
                         return []
+                    case "Folder":
+                        return []
                     case "Podcast":
                         return []
                     case "Artist":
@@ -2970,6 +2972,8 @@ function getUserSubscriptions(): string[] {
                 const item = library_item.item.data
                 switch (item.__typename) {
                     case "Album":
+                        return []
+                    case "Folder":
                         return []
                     case "Playlist":
                         return []
